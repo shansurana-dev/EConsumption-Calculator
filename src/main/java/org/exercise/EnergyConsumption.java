@@ -21,27 +21,26 @@ public class EnergyConsumption {
         }
     }
     //Method to calculate the energy consumed
-    private static float getEnergyConsumed(List<Message> messages) throws Exception{
+    static float getEnergyConsumed(List<Message> messages) throws Exception{
         if (messages.isEmpty()) {
             throw new Exception("No messages to process.");
         }
+        //Sort the messages based on timestamp to handle out-of-order and duplicate messages
+        Collections.sort(messages);
         float dimmerValue = 0.0f;
         long lastTimestamp = messages.get(0).timestamp;
         float energyConsumed = 0.0f;
+        float duration = 0.0f;
         for (Message message : messages) {
-            System.out.println(message.timestamp + " " + message.messageType + " " + message.deltaValue);
-            if (!message.messageType.equals("TurnOff")) {
-                float duration = (message.timestamp - lastTimestamp) / 3600.0f; // in hours
-                dimmerValue = Math.max(0.0f, Math.min(1.0f, message.deltaValue));
-                energyConsumed += 5.0f * dimmerValue * duration;
-            }
-            lastTimestamp = message.timestamp;
+            duration = (message.timestamp - lastTimestamp) / 3600.0f;
+            energyConsumed += 5.0f * dimmerValue * duration;
             if (message.messageType.equals("TurnOff")) {
                 dimmerValue = 0.0f;
             } else if (message.messageType.equals("Delta")) {
-                dimmerValue += message.deltaValue;
-                dimmerValue = Math.max(0.0f, Math.min(1.0f, dimmerValue));
+                //Math, abs and min functions are used to ensure that the dimmerValue is between 0 and 1
+                dimmerValue = Math.max(0.0f, Math.min(1.0f, Math.abs(dimmerValue + message.deltaValue)));
             }
+            lastTimestamp = message.timestamp;
         }
         return energyConsumed;
     }
@@ -80,9 +79,6 @@ public class EnergyConsumption {
             e.printStackTrace();
             System.exit(1);
         }
-
-        //Sort the messages based on timestamp to handle out-of-order and duplicate messages
-        Collections.sort(messages);
         try {
             float energyConsumed = getEnergyConsumed(messages);
             System.out.printf("Estimated energy used: %.3f Wh\n", energyConsumed);
