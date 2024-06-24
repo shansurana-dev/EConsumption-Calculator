@@ -8,7 +8,7 @@ Steps:
 5. Write test cases.
 
 Approach to Implement a pipeline:
-![alt text](https://lucid.app/lucidspark/eea553d6-43c8-4e55-b3fe-88b25f415f93/edit?invitationId=inv_14218bc2-7e68-4a0a-8401-3ccd5071d317)
+![Capture](https://github.com/shansurana-dev/EConsumption-Calculator/assets/83782547/bcc2ad59-7ee0-4978-962d-a8cf60e20617)
 
 1. Create a single Java Class to create the tool.
 2. Git webhook triggers CI on Jenkins.
