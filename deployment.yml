@@ -1,0 +1,21 @@
+apiVersion: EConsumption-Calculator/v1
+kind: Deployment
+metadata:
+  name: EConsumption-Calculator
+  labels:
+    app: EConsumption-Calculator
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: EConsumption-Calculator
+  template:
+    metadata:
+      labels:
+        app: EConsumption-Calculator
+    spec:
+      containers:
+        - name: EConsumption-Calculator
+          image: shansurana/econsunsumptioncalculator:replaceImageTag
+          ports:
+            - containerPort: 8080

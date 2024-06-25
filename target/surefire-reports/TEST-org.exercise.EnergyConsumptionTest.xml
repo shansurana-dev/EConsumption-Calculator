@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.exercise.EnergyConsumptionTest" time="0.108" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.exercise.EnergyConsumptionTest" time="0.097" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_291\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\shant\AppData\Local\Temp\surefire8501529581340757164\surefirebooter-20240624190850787_3.jar C:\Users\shant\AppData\Local\Temp\surefire8501529581340757164 2024-06-24T19-08-49_832-jvmRun1 surefire-20240624190850787_1tmp surefire_0-20240624190850787_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\shant\AppData\Local\Temp\surefire433891189948229490\surefirebooter-20240625001624432_3.jar C:\Users\shant\AppData\Local\Temp\surefire433891189948229490 2024-06-25T00-16-23_622-jvmRun1 surefire-20240625001624432_1tmp surefire_0-20240625001624432_2tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\shant\Desktop\EConsumption-Calculator\target\test-classes;C:\Users\shant\Desktop\EConsumption-Calculator\target\classes;C:\Users\shant\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\shant\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\shant\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\shant\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\shant"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\shant\AppData\Local\Temp\surefire8501529581340757164\surefirebooter-20240624190850787_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\shant\AppData\Local\Temp\surefire433891189948229490\surefirebooter-20240625001624432_3.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_291\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_291\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testSimpleCase" classname="org.exercise.EnergyConsumptionTest" time="0.055"/>
+  <testcase name="testSimpleCase" classname="org.exercise.EnergyConsumptionTest" time="0.046"/>
   <testcase name="testEdgeCaseAllOff" classname="org.exercise.EnergyConsumptionTest" time="0.002"/>
-  <testcase name="testComplexCase" classname="org.exercise.EnergyConsumptionTest" time="0.002"/>
-  <testcase name="testMissingMessages" classname="org.exercise.EnergyConsumptionTest" time="0.004"/>
+  <testcase name="testComplexCase" classname="org.exercise.EnergyConsumptionTest" time="0.003"/>
+  <testcase name="testMissingMessages" classname="org.exercise.EnergyConsumptionTest" time="0.002"/>
   <testcase name="testOutOfOrderMessages" classname="org.exercise.EnergyConsumptionTest" time="0.002"/>
 </testsuite>

@@ -21,9 +21,10 @@ public class EnergyConsumption {
         }
     }
     //Method to calculate the energy consumed
-    static float getEnergyConsumed(List<Message> messages) throws Exception{
+    static float getEnergyConsumed(List<Message> messages) {
         if (messages.isEmpty()) {
-            throw new Exception("No messages to process.");
+            System.out.println("No messages to process.");
+            System.exit(0);
         }
         //Sort the messages based on timestamp to handle out-of-order and duplicate messages
         Collections.sort(messages);

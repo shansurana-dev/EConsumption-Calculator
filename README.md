@@ -19,3 +19,15 @@ Continuous Integration:
 Continuous Deployment:
 6. Update manifests and upload to repo.
 7. Configure ArgoCD to watch the manifest repo for update and deploy to Kubernetes.
+
+# Simple steps to run the tool on EC2 instance using Docker:
+1. open AWS CLI or connect from the terminal to the EC2 instance.
+2. sudo apt update -y
+3. sudo apt install docker.io -y
+4. sudo systemctl status docker
+5. In order to give permission to connect to docker daemon, run the following command:
+sudo usermod -aG docker ubuntu
+logout and login again to the EC2 instance.
+docker run hello-world
+6. Clone the git repository
+7. Run the docker build and run commands to start the app
